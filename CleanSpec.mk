@@ -52,3 +52,6 @@ $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/walleye/vendor/etc/senso
 
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/root/init.$(PRODUCT_HARDWARE).logging.rc)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/root/init.$(PRODUCT_HARDWARE).usb.rc)
+
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/lib/libgptutils.so)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/lib64/libigptutils.so)
