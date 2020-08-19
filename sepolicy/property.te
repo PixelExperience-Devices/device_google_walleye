@@ -1,1 +1,1 @@
-type radio_usb_prop, property_type;
+vendor_public_prop(radio_usb_prop)
