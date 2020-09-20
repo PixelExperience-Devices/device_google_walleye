@@ -35,6 +35,9 @@ BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=3
 
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
+# Display
+TARGET_SCREEN_DENSITY := 420
+
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_walleye \
     libfstab

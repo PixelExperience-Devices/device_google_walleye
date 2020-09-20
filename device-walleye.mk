@@ -33,9 +33,6 @@ DEVICE_PACKAGE_OVERLAYS += device/google/muskie/walleye/overlay
 
 include device/google/muskie/device-common.mk
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=420
-
 # Thermal HAL
 PRODUCT_COPY_FILES += \
     device/google/muskie/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
