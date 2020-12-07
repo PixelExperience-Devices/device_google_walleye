@@ -38,7 +38,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit product specific makefiles
 $(call inherit-product, device/google/muskie/device-walleye.mk)
-$(call inherit-product-if-exists, vendor/google_devices/muskie/proprietary/device-vendor-walleye.mk)
+$(call inherit-product, vendor/google/walleye/walleye-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     device/google/walleye/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
