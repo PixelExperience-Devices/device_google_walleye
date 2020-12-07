@@ -21,7 +21,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_HARDWARE := walleye
 
 # To build walleye specific modules e.g. librecovery_ui_walleye.
-PRODUCT_SOONG_NAMESPACES += device/google/muskie
+PRODUCT_SOONG_NAMESPACES += device/google/walleye
 
 # DEVICE_PACKAGE_OVERLAYS for the device should be before
 # including common overlays since the one listed first
@@ -29,13 +29,13 @@ PRODUCT_SOONG_NAMESPACES += device/google/muskie
 ifdef DEVICE_PACKAGE_OVERLAYS
 $(warning Overlays defined in '$(DEVICE_PACKAGE_OVERLAYS)' will override '$(PRODUCT_HARDWARE)' overlays)
 endif
-DEVICE_PACKAGE_OVERLAYS += device/google/muskie/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/walleye/overlay
 
-include device/google/muskie/device-common.mk
+include device/google/walleye/device-common.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420
 
 # Thermal HAL
 PRODUCT_COPY_FILES += \
-    device/google/muskie/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    device/google/walleye/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
