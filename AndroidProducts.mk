@@ -15,10 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_walleye.mk \
-    $(LOCAL_DIR)/aosp_walleye_test.mk \
-    $(LOCAL_DIR)/aosp_walleye_hwasan.mk \
+    $(LOCAL_DIR)/aosp_walleye.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_walleye-userdebug \
-    aosp_walleye_test-userdebug
+    aosp_walleye-userdebug
