@@ -37,7 +37,7 @@ TARGET_GAPPS_ARCH := arm64
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit product specific makefiles
-$(call inherit-product, device/google/muskie/device-walleye.mk)
+$(call inherit-product, device/google/walleye/device-walleye.mk)
 $(call inherit-product, vendor/google/walleye/walleye-vendor.mk)
 
 PRODUCT_COPY_FILES += \
