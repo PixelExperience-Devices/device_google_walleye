@@ -1,0 +1,7 @@
+# Pixel identification
+ro.build.fingerprint=google/walleye/walleye:11/RP1A.201005.004.A1/6934943:user/release-keys
+ro.product.manufacturer=Google
+ro.product.device=walleye
+ro.product.brand=google
+ro.product.name=walleye
+ro.product.model=Pixel 2
