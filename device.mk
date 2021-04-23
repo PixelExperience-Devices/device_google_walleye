@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
     device/google/walleye/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 PRODUCT_COPY_FILES += \
-    device/google/walleye/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    device/google/walleye/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Wifi configuration file
 PRODUCT_COPY_FILES += \
