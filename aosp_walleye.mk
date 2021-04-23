@@ -19,30 +19,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 
-$(call inherit-product, device/google/walleye/device-walleye.mk)
-$(call inherit-product-if-exists, vendor/google_devices/walleye/proprietary/device-vendor-walleye.mk)
+# All components inherited here go to system_ext image
+#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0 \
-    Dialer \
-    Launcher3QuickStep \
-    WallpaperPicker \
-    vndk_package
+#
+# All components inherited here go to vendor image
+#
+# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-PRODUCT_COPY_FILES += \
-    device/google/walleye/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    frameworks/native/data/etc/aosp_excluded_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/aosp_excluded_hardware.xml
+# Inherit some common PixelExperience stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_RESTRICT_VENDOR_FILES := owner
-
-# Keep the VNDK APEX in /system partition for REL branches as these branches are
-# expected to have stable API/ABI surfaces.
-ifneq (REL,$(PLATFORM_VERSION_CODENAME))
-  PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
-endif
+# Inherit product specific makefiles
+$(call inherit-product, device/google/walleye/device.mk)
+$(call inherit-product, vendor/google/walleye/walleye-vendor.mk)
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_walleye
 PRODUCT_DEVICE := walleye
-PRODUCT_MODEL := AOSP on walleye
+PRODUCT_MODEL := Pixel 2
