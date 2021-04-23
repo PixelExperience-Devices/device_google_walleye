@@ -45,3 +45,9 @@ PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_walleye
 PRODUCT_DEVICE := walleye
 PRODUCT_MODEL := Pixel 2
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=walleye \
+    PRIVATE_BUILD_DESC="walleye-user 11 RP1A.201005.004.A1 6934943 release-keys"
+
+BUILD_FINGERPRINT := google/walleye/walleye:11/RP1A.201005.004.A1/6934943:user/release-keys
