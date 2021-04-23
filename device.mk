@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi configuration file
 PRODUCT_COPY_FILES += \
-    device/google/walleye/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+    device/google/walleye/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 #IMU calibration
 PRODUCT_PROPERTY_OVERRIDES += \
