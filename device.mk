@@ -75,17 +75,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.radio.log_loc="/data/vendor/modem_dump"
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.logging.userdebug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
+    $(LOCAL_PATH)/rootdir/etc/init.logging.userdebug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
 else
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
+    $(LOCAL_PATH)/rootdir/etc/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_HARDWARE).logging.rc
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-walleye.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-$(PRODUCT_HARDWARE).rc \
-    $(LOCAL_PATH)/init.walleye.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_HARDWARE).usb.rc \
-    $(LOCAL_PATH)/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg \
-    $(LOCAL_PATH)/init.insmod_charger.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod_charger.cfg
+    $(LOCAL_PATH)/rootdir/etc/init-walleye.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-$(PRODUCT_HARDWARE).rc \
+    $(LOCAL_PATH)/rootdir/etc/init.walleye.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_HARDWARE).usb.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg \
+    $(LOCAL_PATH)/rootdir/etc/init.insmod_charger.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod_charger.cfg
 
 # Input device files
 PRODUCT_COPY_FILES += \
