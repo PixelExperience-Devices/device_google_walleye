@@ -6,7 +6,7 @@
    {
       "repository":  "vendor_google_walleye",
       "target_path": "vendor/google/walleye",
-      "branch":      "eleven",
+      "branch":      "twelve",
       "remote":      "pixel-devices-blobs"
    }
 ]
