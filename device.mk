@@ -22,6 +22,8 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 PRODUCT_HARDWARE := walleye
 
+PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
+
 # To build walleye specific modules e.g. librecovery_ui_walleye.
 PRODUCT_SOONG_NAMESPACES += device/google/walleye
 
