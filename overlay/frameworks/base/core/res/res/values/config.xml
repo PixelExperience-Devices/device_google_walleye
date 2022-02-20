@@ -187,7 +187,7 @@
     </integer-array>
 
     <!-- Whether the display blanks itself when transitioning from a doze to a non-doze state -->
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON. -->
