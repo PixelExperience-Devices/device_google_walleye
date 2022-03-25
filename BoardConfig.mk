@@ -42,3 +42,13 @@ TARGET_RECOVERY_WIPE := device/google/walleye/recovery.wipe
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_walleye \
     libfstab
+
+# Board uses A/B OTA.
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vbmeta \
+    dtbo \
+    vendor
